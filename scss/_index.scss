@@ -44,6 +44,10 @@ li {
     object-position: center;
 }
 
+.container{
+    max-width: 1140px;
+}
+
 section {
     height: 100vh;
     padding-top: 70px;
@@ -60,7 +64,7 @@ section {
 
 .bg-navbar {
     z-index: 20;
-    background: var(--fourth);
+    background: var(--third);
     backdrop-filter: bluer(10px);
     box-shadow: 2px 2px 10px #222;
 }
@@ -74,6 +78,15 @@ section {
     font-size: 4.8vw;
 }
 .navbar {
+    .logo{
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+    }
+    .logo_text{
+        font-size: 1.8em;
+        color: var(--primary);
+    }
     .nav-link {
         color: #242323;
         font-weight: bold;
@@ -106,7 +119,7 @@ section {
             }
 
             &:hover {
-                color: var(--third) !important;
+                color: var(--fourth) !important;
             }
 
             &:hover::after {
@@ -119,6 +132,9 @@ section {
             }
         }
     }
+}
+.carousel{
+
 }
 #about{
     background-color: var(--fourth);
