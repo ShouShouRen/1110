@@ -25,6 +25,15 @@ footer {
     --fourth: #F8FCFB;
 }
 
+@font-face {
+    font-family: "NotoSansTC";
+    src: url(../fonts/NotoSansTC-Regular.otf);
+}
+
+body{
+    font-family: "NotoSansTC";
+}
+
 ul,
 li {
     list-style: none;
@@ -56,14 +65,18 @@ section {
     box-shadow: 2px 2px 10px #222;
 }
 .title{
-    font-size: 3vw;
-    &::first-letter{
-        font-size: 6vw;
-    }
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    background: linear-gradient(135deg,var(--primary),var(--third),lightgreen);
+    font-weight: bold;
+    letter-spacing: 14px;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 4.8vw;
 }
 .navbar {
     .nav-link {
         color: #242323;
+        font-weight: bold;
     }
 
     li {
@@ -106,4 +119,7 @@ section {
             }
         }
     }
+}
+#about{
+    background-color: var(--fourth);
 }
