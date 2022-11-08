@@ -30,7 +30,7 @@
                                 <a href="javascript:;" data-target="#about" class="nav-link">關於我們</a>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:;" data-target="#about" class="nav-link">最新消息</a>
+                                <a href="javascript:;" data-target="#news" class="nav-link">最新消息</a>
                             </li>
                             <li class="nav-item">
                                 <a href="javascript:;" data-target="#about" class="nav-link">病毒資訊</a>
@@ -46,7 +46,7 @@
                 </div>
             </nav>
         </header>
-        <section id="carousel" class="carousel slide overflow-hidden" data-bs-ride="carousel">
+        <div id="bannercarousel" class="carousel slide overflow-hidden" data-bs-ride="carousel">
             <div class="carousel-item active">
                 <img src="./img/about-a.png" alt="" class="vh-100 w-100 object-cover">
                 <div class="carousel-caption d-md-block overflow-hidden">
@@ -77,22 +77,23 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannercarousel" data-bs-slide="prev">
                 <div class="p-2 rounded-2 bg-dark">
                     <span class="carousel-control-prev-icon" area-hidden="true"></span>
                 </div>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#bannercarousel" data-bs-slide="next">
                 <div class="p-2 rounded-2 bg-dark">
                     <span class="carousel-control-next-icon" area-hidden="true"></span>
                 </div>
             </button>
-        </section>
+        </div>
         <section id="about">
             <div class="container">
-                <div class="row py-3">
-                    <div class="col-md-6">
-                        <div id="carousel" class="carousel slide wow fadeInLeft" data-bs-ride="carousel" data-wow-duration="2.6s">
+                <div class="row py-3 justify-content-center">
+                    <div class="col-md-6 col-11">
+                        <div id="carousel" class="carousel slide wow fadeInLeft" data-bs-ride="carousel"
+                            data-wow-duration="2.6s">
                             <div class="carousel-item active">
                                 <img src="./img/about-b.png" alt="" class="w-100 object-cover">
                             </div>
@@ -104,7 +105,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-11">
                         <div class="p-2">
                             <h2 class="title wow fadeInDown" data-wow-duration="2.6s">關於我們</h2>
                             <p class="about_para pt-lg-5 pt-3 wow fadeInRight" data-wow-duration="2.6s">
@@ -114,47 +115,15 @@
                     </div>
                 </div>
                 <div class="row pt-lg-5 pt-3 justify-content-center g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.8s">
+                    <div class="col-lg-3 col-md-6 col-11 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="0.8s"
+                        v-for="about in abouts">
                         <div class="position-relative">
-                            <div class="ribbon">1</div>
+                            <div class="ribbon">{{about.id}}</div>
                         </div>
                         <div class="about_card rounded-4">
                             <div class="m-3 p-4">
-                                <h3 class="text-orange pt-4 pb-3 fw-bold">正確資訊</h3>
-                                <p>本網站提供政府給予最新資訊確保防疫資訊無落差</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="1s">
-                        <div class="position-relative">
-                            <div class="ribbon">2</div>
-                        </div>
-                        <div class="about_card rounded-4">
-                            <div class="m-3 p-4">
-                                <h3 class="text-orange pt-4 pb-3 fw-bold">團隊研發</h3>
-                                <p>結合政府醫院一起研發新型疫苗對抗WH-78病毒</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="1.2s">
-                        <div class="position-relative">
-                            <div class="ribbon">3</div>
-                        </div>
-                        <div class="about_card rounded-4">
-                            <div class="m-3 p-4">
-                                <h3 class="text-orange pt-4 pb-3 fw-bold">團隊陣容</h3>
-                                <p>集結醫療及科技業IT人才打造資訊整合網站</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="1.4s">
-                        <div class="position-relative">
-                            <div class="ribbon">4</div>
-                        </div>
-                        <div class="about_card rounded-4">
-                            <div class="m-3 p-4">
-                                <h3 class="text-orange pt-4 pb-3 fw-bold">疫苗種類</h3>
-                                <p>各地方醫院有WH疫苗新型WH-2仍在實驗階段</p>
+                                <h3 class="text-orange pt-4 pb-3 fw-bold">{{about.title}}</h3>
+                                <p>{{about.para}}</p>
                             </div>
                         </div>
                     </div>
@@ -164,15 +133,19 @@
         <section id="news">
             <div class="container">
                 <div class="row">
-                    .col-
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quae, modi quam sit
+                        perferendis quia temporibus! Quas necessitatibus quo deleniti dolorem sequi, repellendus, eum
+                        recusandae saepe nemo blanditiis nesciunt nam?</p>
                 </div>
             </div>
         </section>
     </div>
 </body>
+<script src="./js/vue.global.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/wow.min.js"></script>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/all.js"></script>
 <script src="./js/index.js"></script>
 
 </html>
