@@ -23,6 +23,7 @@ footer {
     --secondary: #C9FDD7;
     --third: #6892D5;
     --fourth: #F8FCFB;
+    --orange: #ff6832;
 }
 
 @font-face {
@@ -42,15 +43,12 @@ li {
 p {
     line-height: 32px;
     letter-spacing: 1.8px;
+    text-align: justify;
 }
 
 .object-cover {
     object-fit: cover;
     object-position: center;
-}
-
-.container {
-    max-width: 1140px;
 }
 
 section {
@@ -82,6 +80,10 @@ section {
     color: transparent;
     -webkit-background-clip: text;
     font-size: 4.8vw;
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
 }
 
 .navbar {
@@ -159,14 +161,44 @@ section {
         h3 {
             font-size: 6vw;
             color: white;
+        }
+
+        .h3_1 {
             text-shadow:
-                #860586 0px 0px 4px, purple 0px 0px 4px, purple 0px 0px 4px,
-                purple 0px 0px 4px, purple 0px 0px 4px, purple 0px 0px 4px;
+                #860586 0px 0px 4px, #860586 0px 0px 4px, #860586 0px 0px 4px,
+                #860586 0px 0px 4px, #860586 0px 0px 4px, #860586 0px 0px 4px;
+        }
+
+        .h3_2 {
+            text-shadow:
+                var(--third) 0px 0px 4px, var(--third) 0px 0px 4px, var(--third) 0px 0px 4px,
+                var(--third) 0px 0px 4px, var(--third) 0px 0px 4px, var(--third) 0px 0px 4px;
+        }
+
+        .h3_3 {
+            text-shadow:
+                #202020 0px 0px 4px, #202020 0px 0px 4px, #202020 0px 0px 4px,
+                #202020 0px 0px 4px, #202020 0px 0px 4px, #202020 0px 0px 4px;
         }
 
         p {
             font-size: 2vw;
             color: white;
+        }
+
+        .p_1 {
+            text-shadow:
+                #ff6832 0px 0px 4px, #ff6832 0px 0px 4px, #ff6832 0px 0px 4px,
+                #ff6832 0px 0px 4px, #ff6832 0px 0px 4px, #ff6832 0px 0px 4px;
+        }
+
+        .p_2 {
+            text-shadow:
+                #797979 0px 0px 4px, #797979 0px 0px 4px, #797979 0px 0px 4px,
+                #797979 0px 0px 4px, #797979 0px 0px 4px, #797979 0px 0px 4px;
+        }
+
+        .p_3 {
             text-shadow:
                 #ff6832 0px 0px 4px, #ff6832 0px 0px 4px, #ff6832 0px 0px 4px,
                 #ff6832 0px 0px 4px, #ff6832 0px 0px 4px, #ff6832 0px 0px 4px;
@@ -176,4 +208,47 @@ section {
 
 #about {
     background-color: var(--fourth);
+
+    .carousel {
+        border-radius: 36% 64% 70% 30%/30% 56% 44% 70%;
+        overflow: hidden;
+
+        img {
+            width: 600px;
+            height: 400px;
+        }
+    }
+
+    .about_para {
+        font-size: 18px;
+        color: #797979;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .ribbon {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-color: #fff;
+        border: 4px solid var(--primary);
+        border-radius: 50%;
+        top: -30px;
+        right: 50px;
+        display: grid;
+        place-items: center;
+        font-size: 2em;
+        color: var(--third);
+    }
+
+    .about_card {
+        height: 280px;
+        border-radius: 1em;
+        background-color: #fff;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+        border-top: 4px solid var(--orange);
+        border-bottom: 4px solid var(--orange);
+    }
 }
