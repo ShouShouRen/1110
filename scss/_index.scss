@@ -249,16 +249,25 @@ section {
         color: var(--third);
     }
 
-    .about_card {
-        border-radius: 1em;
-        background-color: #fff;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-        border-top: 4px solid var(--red);
-        border-bottom: 4px solid var(--red);
+    .col-lg-3 {
+        transition: 800ms;
+
+        &:hover {
+            transform: translateY(-16px);
+
+        }
+        .about_card {
+            border-radius: 1em;
+            background-color: #fff;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+            border-top: 4px solid var(--red);
+            border-bottom: 4px solid var(--red);
+        }
     }
+
 }
-#news{
+
+#news {
     position: relative;
-    // top: -25vh;
     z-index: -5;
 }
