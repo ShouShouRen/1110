@@ -275,4 +275,8 @@ section {
         -webkit-line-clamp: 3;
         overflow: hidden;
     }
+    .myborder{
+        border: 16px solid var(--third);
+        border-radius: 20px;
+    }
 }
