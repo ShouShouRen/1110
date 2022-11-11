@@ -19,11 +19,10 @@ Vue.createApp({
                 para: '目前各地方醫院有WH疫苗新型WH-2仍在實驗階段'
             }
             ],
-            products:[{
+            products: [{
+                title: "抗菌洗手乳",
                 
-            }
-
-            ]
+            }]
         }
     }
 }).mount("#app");

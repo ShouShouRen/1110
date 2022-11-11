@@ -24,7 +24,7 @@
                         data-bs-target="#navtoggle">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end text-center" id="navtoggle">
+                    <div class="collapse navbar-collapse justify-content-end text-center align-items-center" id="navtoggle">
                         <ul class="navbar-nav mt-2 mt-lg-0">
                             <li class="nav-item">
                                 <a href="javascript:;" data-target="#about" class="nav-link">關於我們</a>
@@ -40,6 +40,11 @@
                             </li>
                             <li class="nav-item">
                                 <a href="javascript:;" data-target="#about" class="nav-link">聯絡我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:;" data-target="#about" class="nav-link">
+                                    <img src="./img/shopcart.svg" height="36" width="45" alt="">                                      
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -267,14 +272,16 @@
         <section id="shop">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="p-3">
-                            <img src="" alt="" class="img-fluid">
-                            
+                    <div class="col-lg-4">
+                        <div class="p-2">
+                            <div class="mycard position-relative rounded-2">
+                                <div class="ribbon position-absolute top-25 right-0 text-center text-white bg-primary" width="122" height="66" @click="plus(product)" data-bs-toggle="modal">
+                                    <img src="./img/shopcart.svg" class="position-absolute top-25 right-0" alt="">
+                                </div>
+                                <img :src="product.img" class="object-cover" width="448" height="355" alt="">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4"></div>
-                    <div class="col-4"></div>
                 </div>
             </div>
         </section>
