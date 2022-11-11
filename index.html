@@ -272,13 +272,25 @@
         <section id="shop">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" v-for="product in products">
                         <div class="p-2">
                             <div class="mycard position-relative rounded-2">
-                                <div class="ribbon position-absolute top-25 right-0 text-center text-white bg-primary" width="122" height="66" @click="plus(product)" data-bs-toggle="modal">
-                                    <img src="./img/shopcart.svg" class="position-absolute top-25 right-0" alt="">
+                                <div class="ribbon position-absolute top-[25px] right-[0px] text-center text-white bg-green w-[122px] h-[66px]"
+                                    @click="plus(product)" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <i
+                                        class="text-[2.5em] position-absolute right-[25px] top-[15px] fa-solid fa-cart-plus"></i>
                                 </div>
-                                <img :src="product.img" class="object-cover" width="448" height="355" alt="">
+                                <img :src="product.img" class="w-[448px] h-[355px] object-cover w-100" alt="">
+                                <div class="text-center">
+                                    <h4 class="pt-[22px] pb-[13px] text-[22px] text-darkblue fw-bold">{{product.title}}
+                                    </h4>
+                                    <span class="text-danger pb-[25px] inline-block">
+                                        NT ${{product.price}}
+                                    </span>
+                                </div>
+                                <div class="text p-4">
+                                    <p>{{product.content}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
