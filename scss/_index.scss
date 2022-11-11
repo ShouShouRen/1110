@@ -269,6 +269,11 @@ section {
 }
 
 #news {
+    background-image: url('../img/news.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     .news-text {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -279,4 +284,13 @@ section {
         border: 16px solid var(--third);
         border-radius: 20px;
     }
+    marquee{
+        font-size: 1.6vw;
+        border-radius: 20px;
+        border: 4px solid var(--red);
+        box-shadow: 8px -6px 10px #ccc;
+    }
+}
+.vh-70{
+    height: 70vh;
 }
