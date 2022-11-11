@@ -291,6 +291,11 @@ section {
         box-shadow: 8px -6px 10px #ccc;
     }
 }
+#virus{
+    .border-og{
+        border: 4px solid var(--third);
+    }
+}
 .vh-70{
     height: 70vh;
 }
