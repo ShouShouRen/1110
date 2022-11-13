@@ -42,11 +42,6 @@
                             <li class="nav-item">
                                 <a href="javascript:;" data-target="#about" class="nav-link">聯絡我們</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="javascript:;" data-target="#about" class="nav-link">
-                                    <img src="./img/shopcart.svg" height="36" width="45" alt="">
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -234,7 +229,7 @@
         <section id="virus">
             <div class="container">
                 <h2 class="title text-center wow fadeInDown" data-wow-duration="2.6s">病毒資訊</h2>
-                <div class="row justify-content-center align-items-center vh-70">
+                <div class="row justify-content-center align-items-center vh-lg-70">
                     <div class="col-lg-3 col-md-6 order-lg-1 order-2">
                         <div class="col-12 mb-lg-5 mb-3 wow bounceIn" data-wow-duration="1.6s">
                             <div class="shadow-lg rounded-4 p-4 border-og">
@@ -391,9 +386,18 @@
                     </div>
                     <div class="modal-footer">
                         <div>
-                            <button type="button" class="btn btn-primary clearcart">確認送出</button>
+                            <button type="button" class="btn btn-primary clearcart" data-bs-toggle="modle"
+                                data-bs-target="#clear">確認送出</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="shopCart" tabindex="-1" role="dialog" aria-labelledby="shopCart" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    訂單已送出感謝您的下定
                 </div>
             </div>
         </div>
