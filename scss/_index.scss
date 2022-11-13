@@ -292,8 +292,8 @@ section {
     marquee {
         font-size: 1.6vw;
         border-radius: 20px;
-        border: 4px solid var(--red);
-        box-shadow: 8px -6px 10px #ccc;
+        // border: 4px solid var(--red);
+        // box-shadow: 8px -6px 10px #ccc;
     }
 }
 
@@ -304,71 +304,8 @@ section {
 }
 
 #shop {
+    background-color: var(--third);
 
-    .mycard {
-        background-color: #fff;
-        transition: all .4s;
-        position: relative;
-        overflow: hidden;
-        height: 355px + 118.4px;
-        z-index: 2;
-
-        .ribbon {
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
-            cursor: pointer;
-            transition: all .4s ease;
-            position: absolute;
-            top: 25px;
-            right: 0;
-            img{
-                position: absolute;
-                right: 25px;
-                top: 15px;
-            }
-        }
-
-        &:hover .text {
-            transition: all .4s;
-            opacity: 1;
-            background-color: var(--third);
-            height: 100px;
-            width: 100%;
-            position: absolute;
-            bottom: 15px;
-            color: #fff;
-        }
-        h4{
-            padding-top: 22px;
-            padding-bottom: 13px;
-            font-size: 22px;
-            color:#1111e4;
-        }
-
-        .ribbon::before {
-            content: "加入購物車";
-            padding-top: 20px;
-            padding-bottom: 20px;
-            display: inline-block;
-            font-size: 17px;
-            color: #fff;
-            opacity: 0;
-            transition: all .3s ease;
-        }
-
-        &:hover .ribbon {
-            width: 250px;
-
-            &::before {
-                opacity: 1;
-            }
-        }
-
-        .text {
-            opacity: 0;
-            text-align: left;
-            font-size: 17px;
-        }
-    }
 }
 
 .vh-70 {
