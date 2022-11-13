@@ -278,7 +278,8 @@
                         <div class="p-2 cursor-pointer">
                             <div class="rounded-2">
                                 <img :src="product.img" class="object-cover w-100">
-                                <div class="text-center text-white bg-primary" @click="plus(product)" data-bs-toggle="modal" data-bs-target="#shopCart">
+                                <div class="text-center text-white bg-primary" @click="plus(product)"
+                                    data-bs-toggle="modal" data-bs-target="#shopCart">
                                     <img src="./img/shopcart.svg" class="cart">
                                 </div>
                                 <div class="text-center">
@@ -295,14 +296,14 @@
         </section>
         <!-- modal -->
         <div class="modal fade" id="first" tabindex="-1" role="dialog" aria-labelledby="first" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="first">最新消息</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./img/news-modal-a.jpg" class="w-100 object-cover" height="140" alt="">
+                        <img src="./img/news-modal-a.jpg" class="w-100 object-cover" height="300" alt="">
                         <div class="col-12">
                             <p class="p-3">
                                 衛管部台灣109年1⽉15⽇衛授疾字第1120100030號公告，新增「嚴重特殊傳染性肺炎」為第五類法定傳染病。2022年12⽉12⽇，湖北省武漢市展開呼吸道疾病及相關疾病監測，再次發現不明原因病毒性肺炎病例。個案臨床表現主要為發熱，少數病⼈呼吸困難，胸部X光片呈雙肺浸潤性病灶。
@@ -313,14 +314,14 @@
             </div>
         </div>
         <div class="modal fade" id="second" tabindex="-1" role="dialog" aria-labelledby="second" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="second">最新消息</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./img/news-modal-b.jpg" class="w-100 object-cover" height="140" alt="">
+                        <img src="./img/news-modal-b.jpg" class="img-fluid" alt="">
                         <div class="col-12">
                             <p class="p-3">
                                 此病毒臨發病者，類破傷風桿菌分泌毒素，攻擊神經突觸，導致神經異常放電，影響神經傳導，進⽽出現肌⾁僵直、痙攣，稱為「⾓⼸反張」（頸背痙攣僵硬、腰背反折，⾝體後仰如⼸狀），臉部酒窩處也可能出現詭異的「痙笑」，「不是真的在笑，⽽是因為肌⾁異常收縮。」連呼吸也會受影響，可能因呼吸困難⽽死亡。
@@ -331,14 +332,14 @@
             </div>
         </div>
         <div class="modal fade" id="third" tabindex="-1" role="dialog" aria-labelledby="third" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="third">最新消息</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./img/news-modal-c.jpg" class="w-100 object-cover" height="140" alt="">
+                        <img src="./img/news-modal-c.jpg" class="img-fluid" alt="">
                         <div class="col-12">
                             <p class="p-3">
                                 2023年1⽉9⽇，病原體初步判定為新型星狀病毒，雖已完成病毒全長基因定序，電⼦顯微鏡下呈非典型星狀病毒型態，但該病毒不同於以往發現的⼈類冠狀病毒。星狀病毒為⼀群有三層外套膜之RNA病毒，外表為星形，在電⼦顯微鏡下可看到類似星狀的突起因此得名。除已知會感染⼈類的七種冠狀病毒以外，其他的動物宿主包括蝙蝠、豬、⽜、火雞、貓、狗、雪貂等。並有零星的跨物種傳播報告。
@@ -348,20 +349,55 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="modal fade" id="shopCart" tabindex="-1" role="dialog" aria-labelledby="shopCart" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="shopCart">最新消息</h5>
+                        <h3 class="modal-title" id="shopCart">購物車</h3>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        
+                        <div class="d-flex">
+                            <div class="col-4">
+                                <h4 class="p-2">品名</h4>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="p-2">金額</h4>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="p-2">數量</h4>
+                            </div>
+                        </div>
+                        <hr>
+                        <template v-for="product,idx in products">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="py-2">{{product.title}}</h5>
+                                <div class="d-flex justify-content-evenly align-items-center">
+                                    <span>{{sub[idx]}}元</span>
+                                    <div class="btn btn-primary" @click="minus(product)">-</div>
+                                    <input type="text" class="form-control w-25 m-2" v-model="product.amountShow">
+                                    <div class="btn btn-primary" @click="plus(product)">+</div>
+                                </div>
+                            </div>
+                        </template>
+                        <h5>姓名:</h5>
+                        <form>
+                            <input type="text" class="w-75 form-control m-2" required>
+                            <h5>地址:</h5>
+                            <input type="text" class="w-75 form-control m-2" required>
+                            <div class="text-right text-danger">總共{{total}}元</div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div>
+                            <button type="button" class="btn btn-primary clearcart">確認送出</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 </body>
